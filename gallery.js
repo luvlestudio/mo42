@@ -3,7 +3,7 @@ window.onload = () => {
   const collapseBtn = document.getElementById("collapseBtn");
   const hiddenImages = document.querySelectorAll("#gallery img.hidden");
 
-  showMoreBtn.addEventListener("click", () => {
+  showMoreBtn?.addEventListener("click", () => {
     hiddenImages.forEach((img) => {
       img.classList.remove("hidden");
     });
@@ -46,22 +46,22 @@ window.onload = () => {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: "김재범 ♥ 한소라의 모바일 청첩장",
-        description: "2025년 3월 23일 일요일♡",
-        imageUrl: "https://i.imgur.com/HaviTeo.png",
+        title: "임상호 ♥ 조다정의 모바일 청첩장",
+        description: "2025년 3월 29일 토요일♡",
+        imageUrl: "https://i.imgur.com/jaZn80y.png",
         imageWidth: 1200,
         imageHeight: 630,
         link: {
-          mobileWebUrl: "https://mo42.luvle.co.kr",
-          webUrl: "https://mo42.luvle.co.kr",
+          mobileWebUrl: "https://mo39.luvle.co.kr",
+          webUrl: "https://mo39.luvle.co.kr",
         },
       },
       buttons: [
         {
           title: "자세히 보기",
           link: {
-            mobileWebUrl: "https://mo42.luvle.co.kr",
-            webUrl: "https://mo42.luvle.co.kr",
+            mobileWebUrl: "https://mo39.luvle.co.kr",
+            webUrl: "https://mo39.luvle.co.kr",
           },
         },
       ],
@@ -94,7 +94,7 @@ window.onload = () => {
   const documentBody = document.querySelector("body");
 
   const outsideModal = document.querySelector(".swiper");
-  outsideModal.addEventListener("click", function (event) {
+  outsideModal?.addEventListener("click", function (event) {
     if (event.target.classList.contains("swiper-slide")) {
       outsideModal.style.display = "none";
       documentBody.style.overflow = "auto";
@@ -116,58 +116,28 @@ window.onload = () => {
     const link = "sms:?body=" + encodeURIComponent(message);
     window.location.href = link;
   });
-   // BGM
-   const playButton = document.getElementById("playButton");
-   const musicCover = document.getElementById("music-cover");
-   const audio = document.getElementById("bgm");
-   playButton.src = "img/play.png"; // 초기 상태는 play.png
-   playButton.addEventListener("click", function () {
-     if (audio) {
-       // 현재 오디오가 재생 중인지 여부를 확인
-       if (audio.paused) {
-         // 오디오가 멈춰있으면 재생
-         audio.play().catch((error) => {
-           console.error("오디오 재생 중 오류 발생:", error);
-         });
-         playButton.src = "img/stop.png"; // 버튼 이미지를 stop.png로 변경
-       } else {
-         // 오디오가 재생 중이면 정지
-         audio.pause();
-         audio.currentTime = 0; // 재생 위치를 처음으로 설정
-         playButton.src = "img/play.png"; // 버튼 이미지를 play.png로 변경
-       }
-     } else {
-       console.error("Audio element not found.");
-     }
-   });
- 
-   const isKakaoTalk = window.navigator.userAgent
-     .toLowerCase()
-     .includes("kakaotalk");
- 
-   if (isKakaoTalk) {
-     musicCover.addEventListener("touchstart", function () {
-       console.log("scroll");
-       if (audio) {
-         // 현재 오디오가 재생 중인지 여부를 확인
-         if (audio.paused) {
-           // 오디오가 멈춰있으면 재생
-           audio.play().catch((error) => {
-             console.error("오디오 재생 중 오류 발생:", error);
-           });
-           playButton.src = "img/stop.png"; // 버튼 이미지를 stop.png로 변경
-         } else {
-           // 오디오가 재생 중이면 정지
-           audio.pause();
-           audio.currentTime = 0; // 재생 위치를 처음으로 설정
-           playButton.src = "img/play.png"; // 버튼 이미지를 play.png로 변경
-         }
-         this.style.display = "none";
-       } else {
-         console.error("Audio element not found.");
-       }
-     });
-   } else {
-     musicCover.style.display = "none";
-   }
+
+  // BGM
+  const playButton = document.getElementById("playButton");
+  const audio = document.getElementById("bgm");
+  playButton.src = "img/play.png"; // 초기 상태는 play.png
+  playButton.addEventListener("click", function () {
+    if (audio) {
+      // 현재 오디오가 재생 중인지 여부를 확인
+      if (audio.paused) {
+        // 오디오가 멈춰있으면 재생
+        audio.play().catch((error) => {
+          console.error("오디오 재생 중 오류 발생:", error);
+        });
+        playButton.src = "img/stop.png"; // 버튼 이미지를 stop.png로 변경
+      } else {
+        // 오디오가 재생 중이면 정지
+        audio.pause();
+        audio.currentTime = 0; // 재생 위치를 처음으로 설정
+        playButton.src = "img/play.png"; // 버튼 이미지를 play.png로 변경
+      }
+    } else {
+      console.error("Audio element not found.");
+    }
+  });
 };
