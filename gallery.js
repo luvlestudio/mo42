@@ -46,22 +46,22 @@ window.onload = () => {
     Kakao.Share.sendDefault({
       objectType: "feed",
       content: {
-        title: "김현진 ♥ 박혜성의 모바일 청첩장",
-        description: "2025년 1월 11일 토요일♡",
+        title: "김재범 ♥ 한소라의 모바일 청첩장",
+        description: "2025년 3월 23일 일요일♡",
         imageUrl: "https://i.imgur.com/bdEZl3S.png",
         imageWidth: 1200,
         imageHeight: 630,
         link: {
-          mobileWebUrl: "https://mo43.luvle.co.kr",
-          webUrl: "https://mo43.luvle.co.kr",
+          mobileWebUrl: "https://mo42.luvle.co.kr",
+          webUrl: "https://mo42.luvle.co.kr",
         },
       },
       buttons: [
         {
           title: "자세히 보기",
           link: {
-            mobileWebUrl: "https://mo43.luvle.co.kr",
-            webUrl: "https://mo43.luvle.co.kr",
+            mobileWebUrl: "https://mo42.luvle.co.kr",
+            webUrl: "https://mo42.luvle.co.kr",
           },
         },
       ],
