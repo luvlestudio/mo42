@@ -48,7 +48,7 @@ window.onload = () => {
       content: {
         title: "김재범 ♥ 한소라의 모바일 청첩장",
         description: "2025년 3월 23일 일요일♡",
-        imageUrl: "https://i.imgur.com/bdEZl3S.png",
+        imageUrl: "https://i.imgur.com/HaviTeo.png",
         imageWidth: 1200,
         imageHeight: 630,
         link: {
