@@ -171,5 +171,4 @@ window.onload = () => {
   } else {
     musicCover.style.display = "none";
   }
-  });
-};
+  };
